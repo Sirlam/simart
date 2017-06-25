@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+# Use include() to add URLS from the catalog application
+from django.conf.urls import include
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^catalog/', include('catalog.urls')),
 ]
