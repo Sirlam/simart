@@ -172,3 +172,70 @@ class StationPump(models.Model):
         String for representing the Model object (in Admin site etc.)
         """
         return '%s (%s)' % (self.pump, self.tank)
+
+#  Models for sales
+
+
+class PumpSale(models.Model):
+    """
+    Model representing Sales of pump Products
+    """
+    sale_id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID for Pumps")
+    station = models.ForeignKey(Station, on_delete=models.SET_NULL, null=True)
+    pump = models.ForeignKey(StationPump, on_delete=models.SET_NULL, null=True)
+    opening = models.DecimalField(max_digits=9, decimal_places=2)
+    closing = models.DecimalField(max_digits=9, decimal_places=2)
+    rate = models.DecimalField(max_digits=5, decimal_places=2)
+    sale_add_date = models.DateField(auto_now=True)
+    date_purchased = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        """
+        String for representing the Model object (in Admin site etc.)
+        """
+        return '%s (%s)' % (self.sale_id, self.pump)
+
+
+class OnAccountSale(models.Model):
+    """
+    Model for on Account Sales
+    """
+    account_sale = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID for Pumps")
+    on_account = models.ForeignKey(OnAccount, on_delete=models.SET_NULL, null=True)
+    station = models.ForeignKey(Station, on_delete=models.SET_NULL, null=True)
+    quantity = models.PositiveIntegerField()
+    rate = models.DecimalField(max_digits=5, decimal_places=2)
+    sale_add_date = models.DateField(auto_now=True)
+    date_purchased = models.DateField()
+
+    def __str__(self):
+        """
+        String for representing the Model object (in Admin site etc.)
+        """
+        return '%s (%s)' % (self.account_sale, self.on_account)
+
+
+class Voucher(models.Model):
+    """
+    Model representing expenditure
+    """
+    info = models.CharField(max_length=200, help_text="What was purchased or deducted from the main account")
+    value = models.PositiveIntegerField()
+    date_added = models.DateField(auto_now=True)
+    date_used = models.DateField(null=True, blank=True)
+
+    def __str__(self):
+        """
+        String for representing the Model object (in Admin site etc.)
+        """
+        return '%s (%s)' % (self.id, self.info)
+
+
+class DepositAmount(models.Model):
+    """
+    Model representing Bank deposited Amount to
+    """
+    bank = models.ForeignKey(BankAccount, on_delete=models.SET_NULL, null=True)
+    sale = models.ForeignKey(PumpSale, on_delete=models.SET_NULL, null=True)
+    sale_add_date = models.DateField(auto_now=True)
+    amount = models.CharField(max_length=200, help_text="Amount Deposited")
