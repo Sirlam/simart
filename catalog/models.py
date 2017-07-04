@@ -15,6 +15,7 @@ class Station(models.Model):
     station_id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text="Unique ID for Stations")
     name = models.CharField(max_length=200)
     address = models.CharField(max_length=500)
+    location = models.CharField(max_length=100, blank=True)
 
     def __str__(self):
         """

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Simart - Filling Station Management System Software">
     <meta name="keywords" content="Simart, petrol, filling station, crud, diesel, kerosene">
-    {% block title %}<title>Simart | Dashboard</title>{% endblock %}
+    {% block title %}<title>Simart | Home</title>{% endblock %}
 
 	{% load static %}
     <!-- Site favicon -->
@@ -69,99 +69,59 @@
 			<li class="has-sub active "><a href="#"><i class="icon-menu"></i><span class="title">Dashboard</span></a>
 				<ul class="nav">
 					<li class="active"><a href="#"><span class="title">Daily Summary</span></a></li>
-					<li><a href="#"><span class="title">E-Commerce</span></a></li>
-					<li><a href="#"><span class="title">News Portal</span></a></li>
+					<li><a href="#"><span class="title">Today's Sales</span></a></li>
+					<li><a href="#"><span class="title">Tank's Status</span></a></li>
+					<li><a href="#"><span class="title">Station's Status</span></a></li>
 				</ul>
 			</li>
 			<li class="has-sub"><a href="#"><i class="icon-home"></i><span class="title">Station</span></a>
 				<ul class="nav collapse">
-					<li><a href="#"><span class="title">View All Stations</span></a></li>
-					<li><a href="#"><span class="title">Add New Station</span></a></li>
-					<li><a href="#"><span class="title">Edit / Delete Station</span></a></li>
+                    <li><a href="#"><span class="title">Add New Station</span></a></li>
+					<li><a href="#"><span class="title">View / Edit / Delete Stations</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="panels.html"><i class="icon-newspaper"></i><span class="title">Crude</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-cd"></i><span class="title">Tanks</span></a>
 				<ul class="nav collapse">
-					<li><a href="panels.html"><span class="title">Panels</span></a></li>
-					<li><a href="buttons.html"><span class="title">Buttons</span></a></li>
-					<li><a href="typography.html"><span class="title">Typography</span></a></li>
-					<li><a href="tabs-accordions.html"><span class="title">Tabs &amp; Accordions</span></a></li>
-					<li><a href="tooltips-popovers.html"><span class="title">Tooltips &amp; Popovers</span></a></li>
-					<li><a href="navbars.html"><span class="title">Navbars</span></a></li>
-					<li><a href="breadcrumbs.html"><span class="title">Breadcrumbs</span></a></li>
-					<li><a href="badges-label.html"><span class="title">Badges &amp; Labels</span></a></li>
-					<li><a href="progress-bars.html"><span class="title">Progress Bars</span></a></li>
-					<li><a href="modals.html"><span class="title">Modals</span></a></li>
-					<li><a href="alerts.html"><span class="title">Alerts</span></a></li>
-					<li><a href="pagination.html"><span class="title">Pagination</span></a></li>
-					<li><a href="video.html"><span class="title">Video</span></a></li>
+					<li><a href="#"><span class="title">Add New Tank</span></a></li>
+					<li><a href="#"><span class="title">View / Edit / Delete Tanks</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="basic-tables.html"><i class="icon-window"></i><span class="title">Accounts</span></a>
+            <li class="has-sub"><a href="#"><i class="fa icon-up"></i><span class="title">Pumps</span></a>
 				<ul class="nav collapse">
-					<li><a href="basic-tables.html"><span class="title">Basic Tables</span></a></li>
-					<li><a href="data-tables.html"><span class="title">Data Tables</span></a></li>
+					<li><a href="#"><span class="title">Add New Pump</span></a></li>
+					<li><a href="#"><span class="title">View / Edit / Delete Pump</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="form-basic.html"><i class="icon-doc-text"></i><span class="title">Bank Accounts</span></a>
+			<li class="has-sub"><a href="#"><i class="icon-droplet"></i><span class="title">Crude</span></a>
 				<ul class="nav collapse">
-					<li><a href="form-basic.html"><span class="title">Basic Form</span></a></li>
-					<li><a href="form-advanced.html"><span class="title">Advanced Plugins</span></a></li>
-					<li><a href="form-wizard.html"><span class="title">Form Wizard</span></a></li>
-					<li><a href="file-upload.html"><span class="title">File upload</span></a></li>
-					<li><a href="editors.html"><span class="title">Editors</span></a></li>
+					<li><a href="#"><span class="title">Add New Crude</span></a></li>
+					<li><a href="#"><span class="title">View / Edit / Delete Crude</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="graph-flot.html"><i class="icon-chart-bar"></i><span class="title">Tank</span></a>
+			<li class="has-sub"><a href="form-basic.html"><i class="icon-doc-text"></i><span class="title">Sales</span></a>
 				<ul class="nav collapse">
-					<li><a href="graph-flot.html"><span class="title">Flot Charts</span></a></li>
-					<li><a href="graph-morris.html"><span class="title">Morris Charts</span></a></li>
-					<li><a href="graph-peity.html"><span class="title">Peity Charts</span></a></li>
-					<li><a href="graph-sparkline.html"><span class="title">Sparkline Charts</span></a></li>
-					<li><a href="graph-chartjs.html"><span class="title">ChartsJs</span></a></li>
-					<li><a href="graph-chartist.html"><span class="title">Chartist</span></a></li>
-					<li><a href="graph-c3.html"><span class="title">C3 Charts</span></a></li>
+					<li><a href="#"><span class="title">Add New Sales</span></a></li>
+					<li><a href="#"><span class="title">View / Edit / Delete Sales</span></a></li>
+					<li><a href="#"><span class="title">Sales Report</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="mail-inbox.html"><i class="icon-mail"></i><span class="title">Pump</span></a>
+			<li class="has-sub"><a href="graph-flot.html"><i class="icon-book-open"></i><span class="title">Accounts</span></a>
 				<ul class="nav collapse">
-					<li><a href="mail-inbox.html"><span class="title">Inbox</span></a></li>
-					<li><a href="mail-compose.html"><span class="title">Compose Mail</span></a></li>
-					<li><a href="mail-read.html"><span class="title">View Mail</span></a></li>
+					<li><a href="#"><span class="title">Add New Account</span></a></li>
+					<li><a href="#"><span class="title">View / Edit / Delete Accounts</span></a></li>
 				</ul>
 			</li>
-			<li><a href="maps-vector.html"><i class="icon-location"></i><span class="title">Sales</span> <span class="label label-secondary pull-right">NEW</span></a></li>
-			<li class="has-sub"><a href="login.html"><i class="icon-google-circles"></i><span class="title">Various Screens</span></a>
+			<li class="has-sub"><a href="mail-inbox.html"><i class="icon-folder"></i><span class="title">Bank Accounts</span></a>
 				<ul class="nav collapse">
-					<li><a href="login.html"><span class="title">Login</span></a></li>
-					<li><a href="register.html"><span class="title">Register</span></a></li>
-					<li><a href="forgot-password.html"><span class="title">Forgot password</span></a></li>
-					<li><a href="lockscreen.html"><span class="title">Lockscreen</span></a></li>
-					<li><a href="error-404.html"><span class="title">404 Page</span></a></li>
-					<li><a href="blank-page.html"><span class="title">Blank Page</span></a></li>
-					<li><a href="comments.html"><span class="title">Comments</span></a></li>
+					<li><a href="#"><span class="title">Add New Bank Account</span></a></li>
+					<li><a href="#"><span class="title">View / Edit / Delete Bank Accounts</span></a></li>
 				</ul>
 			</li>
-			<li class="has-sub"><a href="icons-entypo.html"><i class="icon-thumbs-up"></i><span class="title">Voucher</span></a>
+			<!--<li><a href="maps-vector.html"><i class="icon-location"></i><span class="title">Sales</span> <span class="label label-secondary pull-right">NEW</span></a></li>-->
+
+			<li class="has-sub"><a href="simple-view.html"><i class="icon-chart-line"></i><span class="title">Reports &amp; Charts</span></a>
 				<ul class="nav collapse">
-					<li><a href="icons-entypo.html"><span class="title">Entypo</span></a></li>
-					<li><a href="icons-fontawesome.html"><span class="title">Font Awesome</span></a></li>
-					<li><a href="icons-glyphicons.html"><span class="title">Glyph Icons</span></a></li>
-				</ul>
-			</li>
-			<li class="has-sub"><a href="simple-view.html"><i class="icon-list"></i><span class="title">Report</span></a>
-				<ul class="nav collapse">
-					<li><a href="simple-view.html"><span class="title">Simple View</span></a></li>
-					<li><a href="cards-view.html"><span class="title">Cards View</span></a></li>
-					<li><a href="strip-view.html"><span class="title">Strip View</span></a></li>
-					<li><a href="table-view.html"><span class="title">Table View</span></a></li>
-				</ul>
-			</li>
-			<li class="has-sub"><a href="short-view.html"><i class="icon-popup"></i><span class="title">Charts</span></a>
-				<ul class="nav collapse">
-					<li><a href="short-view.html"><span class="title">Short View</span></a></li>
-					<li><a href="detailed-view.html"><span class="title">Detailed View</span></a></li>
-					<li><a href="detailed-view-2.html"><span class="title">Detailed Action View</span></a></li>
+					<li><a href="simple-view.html"><span class="title">Generate Report</span></a></li>
 				</ul>
 			</li>
 		</ul>
@@ -172,14 +132,12 @@
 
     <!-- Main container -->
   <div class="main-container gray-bg">
-
 		<!-- Main header -->
 		<div class="main-header row">
 		  <div class="col-sm-6 col-xs-7">
-
 			<!-- User info -->
 			<ul class="user-info pull-left">
-			  <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="images/man-3.jpg">John Henderson <span class="caret"></span></a>
+			  <li class="profile-info dropdown"><a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> <img width="44" class="img-circle avatar" alt="" src="{% static 'images/man-3.jpg' %}">Logged In User <span class="fa fa-caret-down"></span></a>
 
 				<!-- User action menu -->
 				<ul class="dropdown-menu">
@@ -236,7 +194,7 @@
 						<li>
 							<ul class="media-list">
 								<li class="media">
-									<div class="media-left"><img alt="" class="img-circle img-sm" src="images/domnic-brown.png"></div>
+									<div class="media-left"><img alt="" class="img-circle img-sm" src="{% static 'images/domnic-brown.png' %}"></div>
 									<div class="media-body">
 										<a class="media-heading" href="#">
 											<span class="text-semibold">Domnic Brown</span>
@@ -246,7 +204,7 @@
 									</div>
 								</li>
 								<li class="media">
-									<div class="media-left"><img alt="" class="img-circle img-sm" src="images/john-smith.png"></div>
+									<div class="media-left"><img alt="" class="img-circle img-sm" src="{% static 'images/john-smith.png' %}"></div>
 									<div class="media-body">
 										<a class="media-heading" href="#">
 											<span class="text-semibold">John Smith</span>
@@ -256,7 +214,7 @@
 									</div>
 								</li>
 								<li class="media">
-									<div class="media-left"><img alt="" class="img-circle img-sm" src="images/stella-johnson.png"></div>
+									<div class="media-left"><img alt="" class="img-circle img-sm" src="{% static 'images/stella-johnson.png' %}"></div>
 									<div class="media-body">
 										<a class="media-heading" href="#">
 											<span class="text-semibold">Stella Johnson</span>
@@ -266,7 +224,7 @@
 									</div>
 								</li>
 								<li class="media">
-									<div class="media-left"><img alt="" class="img-circle img-sm" src="images/alex-dolgove.png"></div>
+									<div class="media-left"><img alt="" class="img-circle img-sm" src="{% static 'images/alex-dolgove.png' %}"></div>
 									<div class="media-body">
 										<a class="media-heading" href="#">
 											<span class="text-semibold">Alex Dolgove</span>
@@ -276,7 +234,7 @@
 									</div>
 								</li>
 								<li class="media">
-									<div class="media-left"><img alt="" class="img-circle img-sm" src="images/domnic-brown.png"></div>
+									<div class="media-left"><img alt="" class="img-circle img-sm" src="{% static 'images/domnic-brown.png' %}"></div>
 									<div class="media-body">
 										<a class="media-heading" href="#">
 											<span class="text-semibold">Domnic Brown</span>
