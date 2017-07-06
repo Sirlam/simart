@@ -4,7 +4,7 @@ from django.views import generic
 
 # Create your views here.
 
-from .models import Station, TankQuantity, PumpSale, OnAccountSale
+from .models import Station
 
 
 def index(request):
@@ -23,8 +23,6 @@ def index(request):
 
 class StationListView(generic.ListView):
     model = Station
-    queryset = Station.objects.all()  # Get all stations
     context_object_name = 'my_station_list'  # your own name for the list as a template variable
-    template_name = 'station_list.html'  # Specify your own template name/location
-
-
+    queryset = Station.objects.all()  # Get all stations
+    template_name = 'stations/station_list.html'  # Specify your own template name/location
