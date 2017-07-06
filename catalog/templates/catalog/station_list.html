@@ -1,18 +1,47 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <h1>Station List</h1>
 
-    {% if station_list %}
-    <ul>
-      {% for station in station_list %}
-      <li>
-        <a href="{{ station.get_absolute_url }}">{{ station.name }}</a> ({{station.address}}) : ({{station.location}})
-      </li>
-      {% endfor %}
-    </ul>
-    {% else %}
-      <p>There are no stations registered yet.</p>
-    {% endif %}
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel-heading clearfix">
+            <h3 class="panel-title">All Stations</h3>
+        </div>
+        {% if my_station_list %}
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Location</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for station in my_station_list %}
+                        <tr>
+                            <td><a href="#">{{ station.name }}</a></td>
+                            <td>{{station.address}}</td>
+                            <td>{{station.location}}</td>
+                            <td>
+                                <a href="#" class="btn btn-info"><span class="fa fa-eye"></span> View</a>
+                                <a href="#" class="btn btn-warning"><span class="fa fa-pencil"></span> Edit</a>
+                                <a href="#" class="btn btn-danger"><span class="fa fa-close"></span> Delete</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        {% else %}
+            <p>There are no stations registered yet.</p>
+        {% endif %}
+	</div>
+</div>
+
 
 {% endblock %}
